@@ -79,6 +79,13 @@ FLAG: CTF{pyvm_r0cks}
 └── data/                      artifacts land here (gitignored except .gitkeep)
 ```
 
+## Tools used
+
+- **[rsleigh](https://github.com/ShaneBreazeale/rsleigh)** — primary disassembler. Every human-readable x86-64 dump in the writeup (PyInit_crackmev3, the VM interpreter at `0x180013c30`, the 58 opcode handlers, the on-demand name decryptor, the setup routine) came from `rsleigh <bin> <addr> --disasm`. Pure-Rust SLEIGH implementation, no Ghidra JVM dependency.
+- **capstone** — used programmatically in `04_classify_opcodes.py` to walk handler bodies and track `vm_regs` / `pc_regs` dataflow.
+- **unicorn** — sandbox for deterministic fragments of the setup code (step 0). No debugger, no Windows, no network.
+- **pefile** — import table + section metadata.
+
 ## License
 
 MIT. The target binary is the original author's. Scripts are provided for educational reverse-engineering research.

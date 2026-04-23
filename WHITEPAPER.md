@@ -3,7 +3,7 @@
 **Author:** (session writeup, Shane, 2026-04-23)
 **Target:** `crackmev3.pyd` — PE64 Python 3.11 C extension published as a Reddit crackme under the "PyVMProtect" brand
 **Flag recovered:** `CTF{pyvm_r0cks}`
-**Method:** End-to-end static reverse engineering. No debugger, no instrumented runtime, no Windows VM. Only Python disassemblers (`rsleigh`, `capstone`), the `unicorn` CPU emulator used as a scratch sandbox for deterministic subroutines, and manual analysis.
+**Method:** End-to-end static reverse engineering. No debugger, no instrumented runtime, no Windows VM. Tools: [`rsleigh`](https://github.com/ShaneBreazeale/rsleigh) as the primary disassembler (pure-Rust SLEIGH, no Ghidra JVM), `capstone` for scripted dataflow analysis, `unicorn` as a scratch sandbox for deterministic subroutines, and `pefile` for PE metadata.
 
 ---
 
