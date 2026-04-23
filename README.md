@@ -67,7 +67,7 @@ FLAG: CTF{pyvm_r0cks}
 ├── solve.sh                   runs steps 0..3 end to end
 ├── crackmev3.pyd              target binary (Windows PE64)
 ├── run.py                     vendor's Python loader (not needed for static lift)
-├── README.txt                 vendor's challenge prompt
+├── CRACKME_README.txt         vendor's challenge prompt
 ├── scripts/
 │   ├── 00_emu_snapshot.py
 │   ├── 01_decrypt_bytecode.py
