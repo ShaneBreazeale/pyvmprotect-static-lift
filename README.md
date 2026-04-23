@@ -56,7 +56,6 @@ FLAG: CTF{pyvm_r0cks}
 
 - Python ≥ 3.9
 - `pefile`, `unicorn`, `capstone` (see `requirements.txt`)
-- No Windows, no debugger, no network
 
 ## Repository layout
 
